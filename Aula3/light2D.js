@@ -57,7 +57,7 @@ function draw() {
     point(A.x, A.y)
 
     stroke(0)
-    B = new ponto(-3, 0)
+    B = new ponto(-10, 0)
     point(B.x, B.y)
 
     C = new ponto(15, 0)
@@ -83,7 +83,7 @@ function draw() {
        Caso contrário a linha fica traçando a margem unitária em A, e a linha mudando de tamanho, apenas procurei fazer
        o inverso
     */
-    var mult = (n.f.y*Uy).toFixed(1)
+    var mult = (n.f.y*Uy).toFixed(10)
 
     strokeWeight(10)
     stroke(0, 255*mult, 0)
@@ -95,9 +95,9 @@ function draw() {
     line(luz.b.x, luz.b.y, luz.f.x, luz.f.y)
 
     if (check == true) {
-        Alpha = (parseFloat(Alpha) - 0.01).toFixed(2)
+        Alpha = (parseFloat(Alpha) - 0.01).toFixed(5)
     } else if (check == false) {
-        Alpha = (parseFloat(Alpha) + 0.01).toFixed(2)
+        Alpha = (parseFloat(Alpha) + 0.01).toFixed(5)
     }
     if (Alpha == 1) {
         check = true
